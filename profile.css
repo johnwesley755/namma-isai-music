@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #270f0f, #15202a, #142711);
+  color: white;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  animation: header 2s ease-in-out;
+  color: white;
+}
+@keyframes header {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+.navbar-links {
+  display: flex;
+  column-gap: 30px;
+}
+.navbar-links a {
+  text-decoration: none;
+  color: #f2f4f7;
+}
+.navbar-links a:hover {
+  text-decoration: underline;
+  color: #f2f4f7;
+}
+.navbar-menu-toggle {
+  display: block;
+}
+.side-navbar {
+  background: linear-gradient(to bottom, #270f0f, #15202a);
+  width: 20%;
+  height: 100%;
+  color: #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  display: none;
+  animation: content 1s ease-in-out;
+}
+@keyframes content {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+}
+main {
+  padding: 20px;
+  margin: 0px 20%;
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: transparent;
+  background-color: white;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  backdrop-filter: blur(100px);
+}
+.search-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.heading {
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  margin: 30px 0;
+  border-bottom: 2px solid black;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: black;
+  pointer-events: none;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  padding: 0 35px 0 5px;
+}
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  color: black;
+  font-size: 1.2em;
+  line-height: 57px;
+}
+button {
+  width: 100%;
+  height: 40px;
+  background: #090931;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+/* Application Status Styles */
+#application-status {
+  background-color: #e9ecef;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+.application {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.application h2 {
+  color: #343a40;
+  margin: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Apply for Services Form */
+.application-sta {
+  padding-top: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+.application-sta h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-name {
+  position: relative;
+  width: auto;
+  margin: 30px;
+  border-bottom: 2px solid black;
+}
+.form-name label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: black;
+  pointer-events: none;
+}
+.form-name input {
+  width: auto;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  padding: 0 35px 0 5px;
+}
+.form-name textarea {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: black;
+  padding: 0 35px 0 5px;
+}
+.form-name input:focus ~ label,
+.form-name input:valid ~ label {
+  top: -5px;
+}
+.form-name textarea:focus ~ label,
+.form-name textarea:valid ~ label {
+  top: -5px;
+  text-align: left;
+}
+.apply-button {
+  width: 30%;
+  height: 40px;
+  background: #090931;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 40px;
+  margin-left: 30%;
+}
+.profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.profile-sections {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+.profile-photo {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+@media screen and (max-width: 900px) {
+  .navigation button {
+    padding: 5px;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+  .side-navbar {
+    width: 30%;
+    display: none;
+  }
+}

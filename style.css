@@ -1,0 +1,156 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #270f0f, #15202a, #142711);
+    color:white;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    width:100%;
+    height:100%;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: header 2s ease-in-out;
+}
+@keyframes header{
+    0%{
+        transform:translateY(-100%);
+    }
+}
+.navbar-links{
+    display:flex;
+    column-gap: 20px;
+
+}
+.navbar-links a{
+    text-decoration: none;
+    color: #f2f4f7
+}
+.navbar-links a:hover{
+    text-decoration: underline;
+    color:#f2f4f7
+}
+.navbar-menu-toggle{
+    display:block;
+   
+}
+.side-navbar{
+    background: linear-gradient(to bottom, #270f0f, #15202a);
+    width:20%;
+    height:100%;
+    color: #E0E0E0;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:20px;
+    display:none;
+    animation:content 1s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity:0;
+        transform:translateX(-200%);
+    }
+}
+
+.side-navbar-link{
+    margin-bottom:30px;
+
+}
+.side-navbar-links a{
+    text-decoration: none;
+    color:#f2f4f7;
+}
+.side-navbar-link a:hover{
+    text-decoration:underline;
+}
+.side-navbar-heading{
+    margin-bottom: 30px;
+}
+.header{
+    display:flex;
+    justify-content: center;
+    gap:50px;
+    padding:50px;
+}
+.header-button{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-top: 10px;
+    background-color:black;
+    border-radius: 25px;
+    border-color: grey;
+    color:#f2f4f7;
+    cursor: pointer;
+}
+.feautres {
+    padding: 50px 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+}
+
+.feautres h2 {
+    margin-bottom: 20px;
+}
+
+.feautres ul,ol {
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+
+.feautres ul li, .feautres ol li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.feautres ul li::before, .feautres ol li::before {
+    content: "✔";
+    color: #1ABC9C;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.footer{
+    margin-top:20px;
+    padding:40px;
+    color:#f2f4f7;
+
+}
+@media screen and (max-width:576px){
+    .navbar-menu-toggle{
+        display: block;
+    }
+    .side-navbar{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+    .navbar-links{
+        display: none;
+    }
+    .header{
+        margin-top:40px;
+        gap:0px;
+        justify-content: center;
+    }
+    .header-paragraph{
+        display:none;
+    }
+    .body{
+        background-repeat: no-repeat;
+    }
+}

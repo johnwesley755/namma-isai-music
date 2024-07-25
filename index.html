@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namma Isai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <h1>Namma Isai</h1>
+      <div class="navbar-links">
+        <p class="navbar-link">
+          <a href="index.html">Home</a>
+        </p>
+        <p class="navbar-link">
+          <a href="signup.html">Sign up</a>
+        </p>
+        <p class="navbar-link">
+          <a href="login.html">Login</a>
+        </p>
+      </div>
+      <div class="navbar-menu-toggle">
+        <i
+          class="fa-solid fa-bars"
+          onclick="showNavbar()"
+          style="cursor: pointer"
+        ></i>
+      </div>
+    </nav>
+    <div class="side-navbar">
+      <p style="text-align: right">
+        <i
+          class="fa-solid fa-xmark"
+          onclick="closeNavbar()"
+          style="cursor: pointer"
+        ></i>
+      </p>
+      <div class="side-navbar-links">
+        <div class="side-navbar-heading">
+          <h2>Namma Isai</h2>
+        </div>
+        <p class="side-navbar-link">
+          <a href="index.html">Home</a>
+        </p>
+        <p class="side-navbar-link">
+          <a href="signup.html">Sign up</a>
+        </p>
+        <p class="side-navbar-link">
+          <a href="login.html">Login</a>
+        </p>
+      </div>
+    </div>
+    <!--Header-->
+    <div class="header">
+      <div>
+        <h1>Listen to our Namma Isai</h1>
+        <p>Vibe the day by listening to music</p>
+        <br />
+        <p class="header-paragraph">
+          Welcome to Namma Isai, your gateway to an immersive music experience.
+          Discover, play, and share your favorite tunes effortlessly.
+        </p>
+        <button class="header-button" id="header-btn" onclick="link()">
+          Listen now!
+        </button>
+      </div>
+      <div>
+        <img
+          class="header-image"
+          src="https://images.pexels.com/photos/3756766/pexels-photo-3756766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          width="300"
+          height="350"
+        />
+      </div>
+    </div>
+    <section class="feautres">
+      <h2>How It Works</h2>
+      <ol>
+        <li>Sign Up for a free account.</li>
+        <li>Log in and create your personalized playlists.</li>
+        <li>Search for your favorite songs and artists.</li>
+        <li>Enjoy seamless playback and share music with friends.</li>
+      </ol>
+    </section>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-box-1">
+          <h2 class="headingText">Namma Isai</h2>
+          <p>
+            Welcome to Namma Isai, your gateway to an immersive music
+            experience. Discover, play, and share your favorite tunes
+            effortlessly.
+          </p>
+          <div class="footer-icon-container">
+            <i class="fa-brands fa-instagram" style="color: #f2f4f7"></i>
+            <i class="fa-brands fa-facebook" style="color: #f2f4f7"></i>
+            <i class="fa-brands fa-twitter" style="color: #f2f4f7"></i>
+          </div>
+        </div>
+        <p>@ NammaIsai.com</p>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="signup.js"></script>
+  </body>
+</html>

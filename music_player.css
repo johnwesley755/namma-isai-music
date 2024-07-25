@@ -1,0 +1,319 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #270f0f, #15202a, #142711);
+    color:white;
+    background-position: center;
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: header 2s ease-in-out;
+    color:white;
+}
+@keyframes header{
+    0%{
+        transform:translateY(-100%);
+    }
+}
+.navbar-links{
+    display:flex;
+    column-gap: 30px;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: #f2f4f7
+}
+.navbar-links a:hover{
+    text-decoration: underline;
+    color:#f2f4f7
+}
+.navbar-menu-toggle{
+    display:block;
+   
+}
+.side-navbar{
+    background: linear-gradient(to bottom, #270f0f, #15202a);
+    width:20%;
+    height:100%;
+    color: #E0E0E0;
+    position:fixed;
+    top:0;
+    left:0;
+    padding:20px;
+    display:none;
+    animation:content 1s ease-in-out;
+}
+@keyframes content{
+    0%{
+        opacity:0;
+        transform:translateX(-200%);
+    }
+}
+.song-section{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.song-search{
+    width:40%;
+    border:solid white 2px;
+    border-radius:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    margin:auto;
+}
+.song-search input{
+    border:none;
+    background-color: transparent;
+    width:100%;
+    color:white;
+}
+.song-search input:focus{
+    outline:none;
+}
+.side-navbar-link{
+    margin-bottom:30px;
+
+}
+.side-navbar-links a{
+    text-decoration: none;
+    color:#f2f4f7;
+}
+.side-navbar-link a:hover{
+    text-decoration:underline;
+}
+.side-navbar-heading{
+    margin-bottom: 30px;
+}
+.container{
+    width:400px;
+    height:400px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:transparent;
+    color:white;
+    margin:auto;
+    box-sizing: border-box;
+    border:2px solid white;
+}
+.songs-heading{
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.playlist-songs{
+    display: flex;
+    justify-content: space-between;
+}
+.top-songs{
+    margin-left: 20%;
+}
+ .top-songs ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+
+        .top-songs ol li {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            height:auto;
+            width: auto;
+            padding: 10px;
+            background: transparent;
+            border:2px solid white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            
+        }
+
+        .top-songs ol li span {
+            margin: 0 10px;
+        }
+        .player {
+            width: 300px;
+            height: 300px;
+            background:transparent;
+            padding: 20px;
+            border: 2px solid white;
+            margin-right: 20%;
+        }
+
+        .player .current-song {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .player .current-song img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .player .current-song h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .player .current-song p {
+            color: #bbb;
+            font-size: 1em;
+        }
+
+        .progress-bar {
+            margin-bottom: 20px;
+        }
+
+        .progress-bar input[type="range"] {
+            width: 100%;
+        }
+
+        .progress-bar .progress-time {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8em;
+            color: #bbb;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5em;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+.footer{
+    margin-top:20px;
+    padding:40px;
+    color:#f2f4f7;
+
+}
+@media screen and (max-width:576px){
+    .navbar-menu-toggle{
+        display: block;
+    }
+    .side-navbar{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+    .navbar-links{
+        display: none;
+    }
+    .playlist-songs{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-right: 15%;
+    }
+    .player{
+        height: auto;
+        width: 250px;
+        margin-left: 20%;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .top-songs{
+        justify-content: space-evenly;
+        margin-left: 10%;
+    }
+    .top-songs ol li{
+        height: auto;
+        width: 350px;
+        font-size: small;
+        justify-content: space-evenly;
+        text-align: left;
+        margin-right: 25%;
+    }
+}
+@media screen and (min-width:577px) and (max-width: 992px) {
+       .navbar-menu-toggle{
+        display: block;
+    }
+    .side-navbar{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+    .navbar-links{
+        display: none;
+    }
+    .playlist-songs{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-right: 15%;
+    }
+    .player{
+        height: auto;
+        width: auto;
+        margin-left: 20%;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .top-songs ol li{
+        height: auto;
+        width: auto;
+        font-size: small;
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width:700px){
+    .navbar-links{
+        display:flex;
+    }
+}
+
+/* Large Laptops and Desktops */
+@media screen and (min-width: 992.01px){
+       .navbar-menu-toggle{
+        display: block;
+    }
+    .side-navbar{
+        width: 50%;
+        height: 100%;
+        z-index: 1;
+    }
+    
+    .playlist-songs{
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: row;
+    }
+    .player{
+        height: 450px;
+        width: 300px;
+        margin-left: 20%;
+        justify-content:space-between;
+    }
+    .top-songs ol li{
+        height: auto;
+        width: auto;
+        font-size: small;
+        margin-top: 0px;
+    }
+}
+
+

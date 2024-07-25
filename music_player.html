@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namma Isai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="music_player.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" src="music_player.js"></script>
+    <style>
+      .playlist-section {
+        margin: 20px;
+        margin-left: 45%;
+      }
+
+      .playlist {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .playlist h3 {
+        margin: 0 0 10px 0;
+      }
+
+      .playlist button {
+        margin-left: 10px;
+      }
+
+      .playlist ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .playlist ul li {
+        padding: 5px 0;
+      }
+
+      .playlist div input[type="text"] {
+        margin: 5px;
+      }
+      #new-playlist-name {
+        background-color: white;
+        color: black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        cursor: text;
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar">
+      <h1>Namma Isai</h1>
+      <div class="navbar-links">
+        <p class="navbar-link">
+          <a href="music_player.html">Home</a>
+        </p>
+        <p class="navbar-link">
+          <a href="index.html" id="sign-out">Sign out</a>
+        </p>
+        <p class="navbar-link">
+          <a href="profile.html" id="profile">Profile</a>
+        </p>
+      </div>
+      <div
+        class="navbar-menu-toggle"
+        onclick="showNavbar()"
+        style="cursor: pointer"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </nav>
+    <!--Side navbar-->
+    <div class="side-navbar">
+      <p style="text-align: right">
+        <i
+          class="fa-solid fa-xmark"
+          onclick="closeNavbar()"
+          style="cursor: pointer"
+        ></i>
+      </p>
+      <div class="side-navbar-links">
+        <div class="side-navbar-heading">
+          <h2>Namma Isai</h2>
+        </div>
+        <p class="side-navbar-link">
+          <a href="music_player.html">Home</a>
+        </p>
+        <p class="side-navbar-link">
+          <a href="index.html">Sign out</a>
+        </p>
+        <p class="navbar-link">
+          <a href="profile.html" id="profile">Profile</a>
+        </p>
+      </div>
+    </div>
+    <!--Song section-->
+    <div class="song-section">
+      <form class="song-search">
+        <input type="text" id="search" placeholder="Search" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+    </div>
+    <div class="songs-heading">
+      <h2>Top Songs</h2>
+    </div>
+    <!--Song playlist-->
+    <main class="playlist-songs">
+      <div class="top-songs">
+        <ol>
+          <li>
+            <span>01</span>
+            <img src="image-1.jpg" width="40" height="40" />
+            <span>Uncompromising warrior</span>
+            <span>Shridhar Ravi</span>
+            <span>01:09</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>02</span>
+            <img src="image-2.jpg" width="40" height="40" />
+            <span>Cinematic teaser</span>
+            <span>Kamalesh Siddu</span>
+            <span>00:35</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>03</span>
+            <img src="image-3.jpg" width="40" height="40" />
+            <span>Leo Bloody Sweet</span>
+            <span>Kamalesh Siddu</span>
+            <span>00:21</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>04</span>
+            <img src="image-2.jpg" width="40" height="40" />
+            <span>Love bgm</span>
+            <span>Kamalesh Siddu</span>
+            <span>00:27</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>05</span>
+            <img src="image-1.jpg" width="40" height="40" />
+            <span>Documentary-bgm</span>
+            <span>Kamalesh Siddu</span>
+            <span>01:10</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>06</span>
+            <img src="image-3.jpg" width="40" height="40" />
+            <span>Comedy bgm</span>
+            <span>Kamalesh Siddu</span>
+            <span>00:35</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>07</span>
+            <img src="image-1.jpg" width="40" height="40" />
+            <span>Investigation theme</span>
+            <span>Prabhat</span>
+            <span>02:25</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+          <li>
+            <span>08</span>
+            <img src="image-2.jpg" width="40" height="40" />
+            <span>Horror Theme</span>
+            <span>Kamalesh Siddu</span>
+            <span>02:08</span>
+            <span><i class="fas fa-play"></i></span>
+          </li>
+        </ol>
+      </div>
+      <div class="player">
+        <div class="current-song">
+          <img src="image-2.jpg" width="200" height="200" alt="Current Song" />
+          <h3>Ripple Echoes</h3>
+          <p>Kael Fischer</p>
+          <p>Best of 2024</p>
+        </div>
+        <div class="progress-bar">
+          <input type="range" id="song-progress" min="0" max="100" value="0" />
+          <div class="progress-time">
+            <span>00:00</span>
+            <span>01:02</span>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="prev-song"><i class="fas fa-backward"></i></button>
+          <button id="play-pause"><i class="fas fa-play"></i></button>
+          <button id="next-song"><i class="fas fa-forward"></i></button>
+          <input
+            type="range"
+            id="volume-control"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.5"
+            title="Volume"
+            style="width: 100px"
+          />
+        </div>
+      </div>
+    </main>
+    <!-- Playlist Section -->
+    <div class="playlist-section">
+      <h2>Your Playlists</h2>
+      <div class="playlist-creation">
+        <input
+          type="text"
+          id="new-playlist-name"
+          placeholder="Enter Playlist Name"
+        />
+        <button id="create-playlist-btn">Create Playlist</button>
+      </div>
+      <div id="playlists-container"></div>
+    </div>
+    <!--Footer-->
+    <div class="footer">
+      <div class="footer-container">
+        <div class="footer-box-1">
+          <h2 class="headingText">Namma Isai</h2>
+          <p>
+            Welcome to Namma Isai, your gateway to an immersive music
+            experience. Discover, play, and share your favorite tunes
+            effortlessly.
+          </p>
+          <div class="footer-icon-container">
+            <i class="fa-brands fa-instagram" style="color: #f2f4f7"></i>
+            <i class="fa-brands fa-facebook" style="color: #f2f4f7"></i>
+            <i class="fa-brands fa-twitter" style="color: #f2f4f7"></i>
+          </div>
+        </div>
+        <p>@ NammaIsai.com</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+      // Elements
+      const createPlaylistBtn = document.getElementById("create-playlist-btn");
+      const newPlaylistNameInput = document.getElementById("new-playlist-name");
+      const playlistsContainer = document.getElementById("playlists-container");
+
+      // Load playlists from local storage
+      let playlists = JSON.parse(localStorage.getItem("playlists")) || [];
+
+      // Display existing playlists
+      function loadPlaylists() {
+        playlistsContainer.innerHTML = ""; // Clear existing playlists
+        playlists.forEach((playlist, index) =>
+          displayPlaylist(index, playlist)
+        );
+      }
+
+      // Display a playlist
+      function displayPlaylist(id, playlist) {
+        const playlistDiv = document.createElement("div");
+        playlistDiv.className = "playlist";
+        playlistDiv.innerHTML = `
+    <h3>${playlist.name}</h3>
+    <button onclick="deletePlaylist(${id})">Delete</button>
+    <ul>
+      ${playlist.songs
+        .map((song) => `<li>${song.title} by ${song.artist}</li>`)
+        .join("")}
+    </ul>
+    <div>
+      <input type="text" placeholder="Add Song Title" id="song-title-${id}" />
+      <input type="text" placeholder="Add Song Artist" id="song-artist-${id}" />
+      <button onclick="addSongToPlaylist(${id})">Add Song</button>
+    </div>
+  `;
+        playlistsContainer.appendChild(playlistDiv);
+      }
+
+      // Add song to a playlist
+      function addSongToPlaylist(playlistId) {
+        const songTitleInput = document.getElementById(
+          `song-title-${playlistId}`
+        );
+        const songArtistInput = document.getElementById(
+          `song-artist-${playlistId}`
+        );
+        const songTitle = songTitleInput.value;
+        const songArtist = songArtistInput.value;
+
+        if (songTitle && songArtist) {
+          playlists[playlistId].songs.push({
+            title: songTitle,
+            artist: songArtist,
+          });
+          savePlaylists();
+          loadPlaylists();
+        }
+      }
+
+      // Create a new playlist
+      createPlaylistBtn.addEventListener("click", () => {
+        const playlistName = newPlaylistNameInput.value.trim();
+        if (playlistName) {
+          playlists.push({
+            name: playlistName,
+            songs: [],
+          });
+          newPlaylistNameInput.value = ""; // Clear input field
+          savePlaylists();
+          loadPlaylists();
+        }
+      });
+
+      // Delete a playlist
+      function deletePlaylist(playlistId) {
+        playlists.splice(playlistId, 1);
+        savePlaylists();
+        loadPlaylists();
+      }
+
+      // Save playlists to local storage
+      function savePlaylists() {
+        localStorage.setItem("playlists", JSON.stringify(playlists));
+      }
+
+      // Initialize
+      loadPlaylists();
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

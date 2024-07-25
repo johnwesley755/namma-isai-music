@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Isai</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="music_player.css" />
+    <link rel="stylesheet" href="profile.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <script type="module" src="profile.js"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <h1>Namma Isai</h1>
+        <div class="navbar-links">
+            <p class="navbar-link">
+                <a href="music_player.html">Home</a>
+            </p>
+            <p class="navbar-link">
+                <a href ="signup.html" id="sign-out">Sign out</a>
+            </p>
+        </div>
+        <div class="navbar-menu-toggle">
+            <i class="fa-solid fa-bars" onclick="showNavbar()" style="cursor: pointer;"></i>
+        </div>
+    </nav>
+    <!--Side navbar-->
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" onclick="closeNavbar()" style="cursor: pointer;"></i>
+        </p>
+        <div class="side-navbar-links">
+            <div class="side-navbar-heading">
+                <h2>Namma Isai</h2>
+            </div>
+            <p class="side-navbar-link">
+                <a href="music_player.html">Home</a>
+            </p>
+            <p class="side-navbar-link">
+                <a href="signup.html">Sign out</a>
+            </p>
+        </div>
+    </div>
+     <main id="main-content">
+      <section id="profile-section" class="profile-section">
+        <div class="profile-sections">
+          <h2 class="heading">My Profile</h2>
+          <form id="profile-form" action="">
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="person"></ion-icon>
+              </span>
+              <input type="text" id="username" required />
+              <label for="username">Username</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="mail"></ion-icon>
+              </span>
+              <input type="email" id="email" required />
+              <label for="email">Email</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <ion-icon name="lock-closed"></ion-icon>
+              </span>
+              <input type="password" id="password" required />
+              <label for="password">Password</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="call"></ion-icon>
+                </span>
+                <input type="text" id="profile-phone" required />
+                <label for="profile-phone">Phone</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-building-circle-exclamation"></i>
+                </span>
+                <input type="text" id="profile-city" required />
+                <label for="profile-city">City</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                   <i class="fa-solid fa-location-dot"></i>  
+                </span>
+                <input type="text" id="profile-state" required />
+                <label for="profile-state">State</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-globe"></i>
+                </span>
+                <input type="text" id="profile-country" required />
+                <label for="profile-country">Country</label>
+            </div>
+            <div class="input-box">
+                <label for="profile-dob"></label>
+                <input type="date" id="profile-dob" required />
+            </div>
+            <button type="submit">Update Profile</button>
+          </form>
+        </div>
+      </section>
+      <script src="index.js"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+</body>
+</html>
