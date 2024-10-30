@@ -73,10 +73,8 @@ Follow these steps to set up **Namma Isai** on your local system:
    ![Namma Isai Music Player UI](home-page.png)  
 
 2. **Playlist Management Feature:**  
-   ![Playlist Management](music-page.png)  
-
-*(Note: Replace the image paths with the actual screenshots in your project.)*  
-
+   ![Playlist Management](music-page.png)
+   
 ---
 
 ## 🤝 Contributing  
